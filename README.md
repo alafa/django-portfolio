@@ -10,6 +10,6 @@ To start the server:
 
 Migrate: `python manage.py migrate`
 
-Every time there's a new model. We need to first:
+Every time there's a new or edited model. We need to run first:
 `python manage.py makemigrations`
 
