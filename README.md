@@ -47,3 +47,12 @@ results = Project.objects.all()
 results[0].title
 ```
 
+## Django Template Language
+
+Print variables: `{{ variable }}`
+
+Also: `{% code logic %}`
+
+For loops must be closed with `{% endfor %}`
+
+Explore further syntax on [the official website.](https://docs.djangoproject.com/en/3.1/ref/templates/language/)
