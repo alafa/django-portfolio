@@ -1,16 +1,23 @@
 {% extends 'projects/base.html' %}
 {% load static %}
 {% block content %}
-    <h1>{{ project.title }}:</h1>
 
-    <!-- Display description of project -->
-    <p> {{ project.description }} </p>
+    <div class="row">
 
-    <!-- Display image of project by setting base path as a variable -->
-    {% with "/projects/img/"|add:project.image as image_path %}
-    <img src="{% static image_path  %}", alt="image of project" width="300">
-    {% endwith %}
+        <h1>{{ project.title }}:</h1>
 
-    <!-- Display 'technology' attribute of project -->
-    <p> Technology: {{ project.technology }} </p>
+        <div class="col-md-8">
+            <!-- Display image of project by setting base path as a variable -->
+            {% with "/projects/img/"|add:project.image as image_path %}
+            <img src="{% static image_path  %}", alt= {{ project.description }} width="100%">
+            {% endwith %}
+        </div>
+        <div class="col-md-4">
+            <!-- Display 'description' attribute of project -->
+            <p> {{ project.description }} </p>
+
+            <!-- Display 'technology' attribute of project -->
+            <p> Technology: {{ project.technology }} </p>
+        </div>
+    </div>
 {% endblock %}
