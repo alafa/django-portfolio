@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <h1>{{ project.title }}:</h1>
+
+    <!-- Display description of project -->
+    <p> {{ project.description }} </p>
+
+    <!-- Display image of project by setting base path as a variable -->
+    {% with "/projects/img/"|add:project.image as image_path %}
+    <img src="{% static image_path  %}", alt="image of project" width="300">
+    {% endwith %}
+
+    <!-- Display 'technology' attribute of project -->
+    <p> Technology: {{ project.technology }} </p>
+
+</body>
+</html>
