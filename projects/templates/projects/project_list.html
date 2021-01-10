@@ -30,7 +30,7 @@
                         <!-- Display 'technology' attribute of project -->
                         <p class="card-title"> Technology: {{ project.technology }} </p>
 
-                        <a href="#"
+                        <a href="{% url 'projects:project_detail' project.pk %}"
                             class="btn btn-primary">
                                 Read More
                             </a>
