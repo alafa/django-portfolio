@@ -56,3 +56,22 @@ Also: `{% code logic %}`
 For loops must be closed with `{% endfor %}`
 
 Explore further syntax on [the official website.](https://docs.djangoproject.com/en/3.1/ref/templates/language/)
+
+## admin usages
+
+Create super user with the following command:
+
+`python manage.py createsuperuser`
+
+Access `http://127.0.0.1:8000/admin/` and log in.
+
+From the admin page you can administrate model objects. Add in `admin.py` the models you want to manage from the admin
+page.
+
+```
+# This registers the Project model
+from projects.models import Project
+
+admin.site.register(Project)
+```
+
